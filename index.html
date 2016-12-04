@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8"/>
+		<title>计算机安全实验一</title>
+        <link rel="stylesheet" href="app.css"/>
+	</head>
+	<body>
+		<div class="contentWrapper">
+            <div class="menuWrapper">
+                <ul class="menu">
+                    <li><a class="symEncrp" href="#symEncrp">对称加密与解密</a></li>
+                    <li><a class="ppEncrp" href="#ppEncrp">公钥密钥加密与解密</a></li>
+                    <li><a class="signVld" href="#signVld">文件签名与验证</a></li>
+                </ul>
+            </div>
+            <div class="workAreaWrapper">
+                <div id="symEncrp">
+                    <div class="actions">
+                        <label><input type="radio" name="actionSym" value="en"/>加密</label>
+                        <label><input type="radio" name="actionSym" value="de"/>解密</label>
+                    </div>
+                    <div class="pswWrapper">
+                        <input class='psw' type="password" placeholder="密码" />
+                    </div>
+                    <textarea class="input" placeholder="待转换文本"></textarea>
+                    <br>
+                    <textarea class="output" placeholder="转换后文本"></textarea>
+                    <br/>
+                    <button class="submit">确定</button>
+                </div>
+                <div id="ppEncrp">
+                    <div class="actions">
+                        <label><input type="radio" name="actionPP" value="en"/>加密</label>
+                        <label><input type="radio" name="actionPP" value="de" />解密</label>
+                    </div>
+                    <textarea class="input" placeholder="待转换文本"></textarea>
+                    <br>
+                    <textarea class="output" placeholder="转换后文本"></textarea>
+                    <br/>
+                    <button class="genPP">生成公私钥对</button><br/>
+                    <div class="ppKeysWrapper">
+                        <textarea class="publicKey" placeholder="接收方提供的公钥"></textarea>
+                        <br/>
+                        <textarea class="privateKey" placeholder="接收方解密用的私钥"></textarea>
+                    </div>
+                    <button class="submit">确定</button>
+                </div>
+                <div id="signVld">
+                    <div class="actions">
+                        <label><input type="radio" name="actionSn" value="gen"/>生成签名</label>
+                        <label><input type="radio" name="actionSn" value="verify"/>签名验证</label>
+                    </div>
+                    <textarea class="input" placeholder="待签名文本/待测试文本"></textarea>
+                    <br/>
+                    <textarea class="output" placeholder="文本签名"></textarea>
+                    <br/>
+                    <button class="submit">确定</button>
+                    <div class="PPKeys">
+                        <textarea class="pubKey" placeholder="公钥"></textarea>
+                        <textarea class="prvKey" placeholder="私钥"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="errorBox" class="error">
+            </div>
+        </div>
+        <script src="jsencript/jsencrypt.js"></script>
+        <script src="cryptojs/rollups/aes.js"></script>
+        <script src="cryptojs/components/core-min.js"></script>
+        <script src="cryptojs/rollups/md5.js"></script>
+        <script src="app.js"></script>
+	</body>
+</html>

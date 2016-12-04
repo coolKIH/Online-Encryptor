@@ -1,0 +1,85 @@
+body {
+    background: #dbdcff;
+    margin: 0 auto;
+    padding: 0 0;
+}
+body * {
+    color: #999;
+    margin: 0;
+    padding: 0 0;
+}
+div.workAreaWrapper > div {
+    display: none;
+}
+div.workAreaWrapper > div:target {
+    display: block;
+}
+.error {
+    color: burlywood; }
+ul.menu {
+    list-style: none;
+}
+ul li {
+    display: inline-block;
+    padding: 1px 2px;
+}
+a {
+    text-decoration: none;
+}
+a:hover, button:hover {
+    color: #555;
+}
+div.menuWrapper {
+    padding: 5px 0 0 0;
+}
+
+textarea {
+    width: 450px;
+    height: 120px;
+    resize: none;
+}
+textarea, input {
+    padding: 5px 5px;
+    margin: 5px;
+    outline: none;
+    border: 2px solid #ddd;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 10px;
+    overflow: auto;
+    color: #654;
+}
+textarea:focus, input:focus {
+    border: 2px solid lightblue;
+    box-shadow: 0 0 5px lightblue;
+}
+div.contentWrapper {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+div.workAreaWrapper {
+    border: 2px #fdf5e6 outset;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
+}
+button {
+    background: #fdf5e6;
+    padding: 6px 10px;
+    border: 0;
+}
+div#errorBox {
+    padding: 5px 10px;
+}
+a.highlight {
+    color: #555;
+    text-decoration: underline;
+}
+label, button,a {
+    cursor: pointer;
+}
